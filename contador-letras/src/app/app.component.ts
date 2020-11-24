@@ -15,16 +15,27 @@ export class AppComponent implements OnInit{
 
      contador(){
        
-      var inputValue = (<HTMLInputElement>document.getElementById("text")).value;
-      //const abc = String.prototype.trim();     
+      var inputValue = ((<HTMLInputElement>document.getElementById("text")).value);
+      //primeiro remove os espaços da string para depois ver o tamanho
+      const abc = inputValue.replace(/\s/g, '')   
+
        document.getElementById("resultado").innerHTML =
-        "Sua frase tem"+  inputValue.length + "letras";
+        "Sua frase tem " +  abc.length + " letras";
       }
-      contadorTextarea(){
+      contadorAngular(){
         //utilizando o ngModel após declarar acima é só utilizar o this. nome da propriedade para pegar a quantidade
-             
-        document.getElementById("resultado2").innerHTML = 
-         "Sua area de texto tem  " + this.desc.length + "letras";
+            var textAngular = this.desc.length 
+            var newAngular = ""
+            for( var i = 0; i < textAngular; i++ ) {
+                
+              if( this.desc.charAt(i) != " " ) {
+              
+                  newAngular += this.desc.charAt(i);
+                      
+              }
+          }
+         document.getElementById("resultado2").innerHTML = 
+         "Sua frase tem  " + newAngular.length + " letras";
           
       };
       	           

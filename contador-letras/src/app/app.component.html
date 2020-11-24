@@ -1,14 +1,18 @@
+
+<h1>Contador de letras<span></span></h1>
+<div class="container">
 <form class="form">
   <label>Digite aqui seu texto:</label>
   <input type="text" id="text" ng-trim="false">
-  <button type="button" (click)="contador()">Contar parte 1</button>
+  <button type="button" (click)="contador()">Contar</button>
 </form>
 <div id="resultado"></div>
-<br>
+<br><br>
 <form class="form2">
   <label>Digite aqui seu texto:</label>
-  <input type="text" id="text2" [(ngModel)]="desc" name="desc" ng-trim="false">
+  <input type="text"  name="input" id="text2" [(ngModel)]="desc" name="desc" ng-trim="true">
   
-  <button type="button" (click)="contadorTextarea()">Contar parte 2</button>
+  <button type="button" (click)="contadorAngular()">Contar</button>
 </form>
 <div id="resultado2"></div>
+</div>

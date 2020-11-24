@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin: 15px;
+    padding: 0;
+    background:linear-gradient(to left, #ddd6f3, #faaca8) ;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    
+}
+div{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+
+    color:dimgray;
+    font-size: 1rem;
+}
+button{
+    color: silver;
+    font: sans-serif bold 10px;
+    font-size: 0.8rem;
+    border: 1px solid silver;
+    padding: 5px 5px;
+    width: 100px;
+    height: 26px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: dimgray;
+}
+h1{
+    color:black;
+    text-align: center;
+    text-shadow: 0 0 0.2em dimgray;
+    
+}
+span::before{
+    content: '';
+    animation: words 5s linear infinite;
+}
+
+@keyframes words{
+    0%{content: "📝";}
+    50%{content:"🧐";}
+    100%{content:"🤔";}
+}
